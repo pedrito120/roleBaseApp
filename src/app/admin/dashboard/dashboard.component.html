@@ -1,0 +1,19 @@
+<form [formGroup]="userForm" (submit)="subir()">
+
+    <div class="formgroup"><label for="name">Name</label>
+        <input id="name" type="text" class="form-control" formControlName="name">
+    </div>
+    <div class="formgroup"><label for="email">Email</label>
+        <input id="email" type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="formgroup"><label for="password">Password</label>
+        <input id="password" type="password" class="form-control" formControlName="password">
+    </div>
+
+    <div class="formGroup"><label for=""></label>
+        <select name="role" id="role" class="form-control" formControlName="role">
+            <option *ngFor="let role of roles" [ngValue]="role" >{{role}}</option>
+        </select>
+    </div>
+    <button type="submit">SUBMIT</button>
+</form>
